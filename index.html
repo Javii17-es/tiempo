@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title id="pageTitle">Temporizador</title>
+</head>
+<body>
+    <div class="container">
+        <div class="timer-container">
+            <div id="hours" class="timer" onclick="setTime('hours')">00</div>
+            <span>:</span>
+            <div id="minutes" class="timer" onclick="setTime('minutes')">00</div>
+            <span>:</span>
+            <div id="seconds" class="timer" onclick="setTime('seconds')">00</div>
+        </div>
+        <div class="timer-description">Hora</div>
+        <div class="buttons">
+            <button id="startBtn" onclick="startTimer()">Iniciar</button>
+            <button id="stopBtn" onclick="stopTimer()">Detener</button>
+            <button id="resetBtn" onclick="resetTimer()">Resetear</button>
+            <button id="settingsBtn" onclick="toggleSettingsMenu()">Ajustes</button>
+        </div>
+        <div class="settings-menu" id="settingsMenu">
+            <input type="color" id="colorPicker" style="display: none;" onchange="changeBackgroundColor()">
+            <button onclick="showCreatorInfo()">Información del Creador</button>
+            <button onclick="openColorPicker()">Cambiar Fondo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
